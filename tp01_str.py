@@ -64,10 +64,10 @@ adresse02 = AdressePostale(2, "Avenue des Lilas", "69000", ville02)
 
 pers01 = Personne(nom="Dupont", prenom="André", adresse=adresse01)
 
-print(str(ville01))
-print(repr(ville02))
-print(adresse01)
-print(adresse02)
+print("la ville de : ", str(ville01))
+print("La ville en repr : ", repr(ville02))
+print("adresse01 : ", adresse01)
+print("adresse02 : ",adresse02)
 
 print(pers01.nom, pers01.prenom, pers01.adresse)
 pers01.majuscule()

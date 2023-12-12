@@ -16,4 +16,4 @@ class ChaineUtils:
 
 print(ChaineUtils.est_anagramme("chine", "chien"))
 print(ChaineUtils.est_anagramme("manoir", "minora"))
-print(ChaineUtils.comptage("marine","mari"))
+print("la chaine revient ", ChaineUtils.comptage("marine","mari"), "fois")

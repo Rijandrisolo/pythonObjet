@@ -13,8 +13,7 @@ class Zoo:
         print(cls.liste_animaux)
         print(cls.nbr_total)
 
-
-mon_zoo = Zoo()
+#mon_zoo = Zoo()
 Zoo.ajouter_animaux("Antilope", 3)
 Zoo.ajouter_animaux("Caïman", 10)
 Zoo.ajouter_animaux("Tigre", 4)
