@@ -7,6 +7,13 @@ class ChaineUtils:
         if sorted(comp1.upper()) == sorted(comp2.upper()):
             return True
         else:
-           return False
+            return False
+
+    @staticmethod
+    def comptage(chaine1, souschn):
+        return chaine1.count(souschn)
+
 
 print(ChaineUtils.est_anagramme("chine", "chien"))
+print(ChaineUtils.est_anagramme("manoir", "minora"))
+print(ChaineUtils.comptage("marine","mari"))

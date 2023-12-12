@@ -17,6 +17,9 @@ class AdressePostale:
         self.code_postal = code_postal
         self.ville = ville
 
+    def __str__(self):
+        return f"{self.num_rue} {self.nom_rue} {self.code_postal} {self.ville}"
+
 
 class Personne:
     def __init__(self, nom: str, prenom: str, adresse: AdressePostale):
