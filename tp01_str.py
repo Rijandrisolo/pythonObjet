@@ -66,7 +66,7 @@ adresse02 = AdressePostale(2, "Avenue des Lilas", "69000", ville02)
 
 pers01 = Personne(nom="Dupont", prenom="André", adresse=adresse01)
 pers02 = Personne(nom="Dupont", prenom="André", adresse=adresse01)
-print("test == avant eq", pers01==pers02)
+print("test eq", pers01==pers02)
 
 print("la ville de : ", str(ville01))
 print("La ville en repr : ", repr(ville02))
