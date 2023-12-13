@@ -43,10 +43,11 @@ class Livre:
 
 
 class LivrePapier(Livre):
-    def __init__(self, titre, auteur, etat, achetable):
+    def __init__(self, titre, auteur, etat, achetable, prix_unit=0.5):
         super().__init__(titre, auteur, achetable=False)
         self._achetable = achetable
         self._etat = etat
+        self.prix_unit = prix_unit
 
     def __str__(self):
         return f" {super().__str__()} Etat : {self._etat} \n"
@@ -56,10 +57,11 @@ class LivrePapier(Livre):
 
 
 class LivreNumerique(Livre):
-    def __init__(self, titre, auteur, formats, achetable):
+    def __init__(self, titre, auteur, formats, achetable, prix_unit=0.25):
         super().__init__(titre, auteur, achetable=False)
         self._achetable = achetable
         self._formats = formats
+        self.prix_unit = prix_unit
 
     def __str__(self):
         return f"{super().__str__()} Format : {self._formats} \n"
