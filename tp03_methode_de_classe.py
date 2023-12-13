@@ -23,3 +23,4 @@ Zoo.afficher_animaux()
 
 Zoo.afficher_animaux()
 Zoo.ajouter_animaux(animal="Lion", nombre=25)
+Zoo.afficher_animaux()

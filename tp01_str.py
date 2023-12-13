@@ -29,6 +29,8 @@ class Personne:
 
     def __str__(self):
         return self.nom + " " + self.prenom + " " + self.adresse
+    def __eq__(self, other):
+        return self.nom==other.nom, self.adresse == other.adresse
 
     def majuscule(self):
         print("Je m'appelle " + self.nom.upper() + " " + self.prenom)
@@ -63,6 +65,8 @@ adresse01 = AdressePostale(1, "Cour Lou Terral", "34080", ville01)
 adresse02 = AdressePostale(2, "Avenue des Lilas", "69000", ville02)
 
 pers01 = Personne(nom="Dupont", prenom="André", adresse=adresse01)
+pers02 = Personne(nom="Dupont", prenom="André", adresse=adresse01)
+print("test == avant eq", pers01==pers02)
 
 print("la ville de : ", str(ville01))
 print("La ville en repr : ", repr(ville02))
