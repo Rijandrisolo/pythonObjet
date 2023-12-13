@@ -68,26 +68,28 @@ class LivreNumerique(Livre):
         return f"{super().__repr__()} Format : {self._formats} \n"
 
 
-l1 = Livre("La recette", "Francis Navarre")
-l2 = Livre("Le jardin", "Jacques Pourcel", False)
-l3 = Livre("Les Misérables", "Victor Hugo", True)
-l4 = LivrePapier("Zo", "Randza Razanamihoatra", "Bon", True)
-l5 = LivreNumerique("Dinitra", "Rado", "pdf", False)
+if __name__ == "__main__":
 
-print("----------------- Affiche_infos ------------------")
-l4.affiche_infos()
-l5.affiche_infos()
-print("----------------- str ------------------")
-print(l1, l2, l3)
-print("----------------- LivrePapier ------------------")
-print(l4)
-print("----------------- LivreNumerique ------------------")
-print(l5)
-print("-----------------après setter ------------------")
-liste = [l1, l2, l3, l4,l5]
-l1.auteur = "Laurent Pourcel"
-print(l1, l2, l3)
-print("----------------- Liste ------------------")
-print(liste)
-for l in liste:
-    print(l)
+    l1 = Livre("La recette", "Francis Navarre")
+    l2 = Livre("Le jardin", "Jacques Pourcel", False)
+    l3 = Livre("Les Misérables", "Victor Hugo", True)
+    l4 = LivrePapier("Zo", "Randza Razanamihoatra", "Bon", True)
+    l5 = LivreNumerique("Dinitra", "Rado", "pdf", False)
+
+    print("----------------- Affiche_infos ------------------")
+    l4.affiche_infos()
+    l5.affiche_infos()
+    print("----------------- str ------------------")
+    print(l1, l2, l3)
+    print("----------------- LivrePapier ------------------")
+    print(type(l4))
+    print("----------------- LivreNumerique ------------------")
+    print(l5)
+    print("-----------------après setter ------------------")
+    liste = [l1, l2, l3, l4, l5]
+    l1.auteur = "Laurent Pourcel"
+    print(l1, l2, l3)
+    print("----------------- Liste ------------------")
+    print(liste)
+    for l in liste:
+        print(l)
