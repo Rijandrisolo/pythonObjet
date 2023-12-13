@@ -12,7 +12,6 @@ class Livre:
             return f" Titre : {self._titre} - Auteur : {self._auteur} \n"
 
     def __repr__(self):
-
         return f" Titre : {self._titre} - Auteur : {self._auteur} - Achetable : {self._achetable}"
 
     @property
@@ -52,16 +51,21 @@ class LivrePapier(Livre):
     def __str__(self):
         return f" {super().__str__()} Etat : {self._etat} \n"
 
+    def __repr__(self):
+        return f" {super().__repr__()} Etat : {self._etat} \n"
+
 
 class LivreNumerique(Livre):
-    def __init__(self, titre, auteur, formats,achetable):
+    def __init__(self, titre, auteur, formats, achetable):
         super().__init__(titre, auteur, achetable=False)
         self._achetable = achetable
         self._formats = formats
 
     def __str__(self):
+        return f"{super().__str__()} Format : {self._formats} \n"
 
-        return f" {super().__str__()} Format : {self._formats} \n"
+    def __repr__(self):
+        return f"{super().__repr__()} Format : {self._formats} \n"
 
 
 l1 = Livre("La recette", "Francis Navarre")
@@ -80,8 +84,10 @@ print(l4)
 print("----------------- LivreNumerique ------------------")
 print(l5)
 print("-----------------après setter ------------------")
-liste = (l1, l2, l3)
+liste = [l1, l2, l3, l4,l5]
 l1.auteur = "Laurent Pourcel"
 print(l1, l2, l3)
 print("----------------- Liste ------------------")
 print(liste)
+for l in liste:
+    print(l)
