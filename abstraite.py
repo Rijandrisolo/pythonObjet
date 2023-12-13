@@ -23,6 +23,12 @@ class Emprunt(Sortie):
         super().__init__(date, livre)
         self.duree_emprunt = duree_emprunt
 
+    def __str__(self):
+        return f"{super().__str__()} durée : {self.duree_emprunt} Prix {self.get_montant()}"
+
+    def __repr__(self):
+        return f"{super().__str__()} durée : {self.duree_emprunt} Prix {self.get_montant()} \n"
+
     def get_montant(self):
         prix_unit = 0
         if type(self.livre) == LivrePapier:
@@ -32,9 +38,6 @@ class Emprunt(Sortie):
 
         prix_emprunt = self.duree_emprunt * prix_unit
         return prix_emprunt
-
-    def __str__(self):
-        return f"{super().__str__()} durée : {self.duree_emprunt} Prix {self.get_montant()}"
 
 
 class Achat(Sortie):
@@ -49,7 +52,16 @@ class Achat(Sortie):
 
 l4 = LivrePapier("Zo", "Randza Razanamihoatra", "Bon", True)
 l5 = LivreNumerique("Dinitra", "Rado", "pdf", False)
-liste = [l4, l5]
 emprunt = Emprunt("21/21/2023", l4, 10)
+emprunt1 = Emprunt("21/21/2023", l5, 10)
+print("----------------Liste des livres-----------------")
+liste = [l4, l5]
+
+liste_emprunt = [emprunt, emprunt1]
 print(liste)
+print("----------------Les Emprunts-----------------")
 print(emprunt)
+print("---------------------------------")
+print(emprunt1)
+print("----------------Liste Emprunts-----------------")
+print(liste_emprunt)
