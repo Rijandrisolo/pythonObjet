@@ -6,6 +6,7 @@ class Ville:
     def __str__(self):
         return self.nom
 
+#affichage liste repr
     def __repr__(self):
         return "Ville(nom='{}', population='{}')".format(self.nom, self.population)
 
@@ -30,7 +31,9 @@ class Personne:
     def __str__(self):
         return self.nom + " " + self.prenom + " " + self.adresse
     def __eq__(self, other):
-        return self.nom==other.nom, self.adresse == other.adresse
+        if not isinstance(other, Personne):
+            return False
+        return self.nom==other.nom and self.adresse == other.adresse
 
     def majuscule(self):
         print("Je m'appelle " + self.nom.upper() + " " + self.prenom)
