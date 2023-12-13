@@ -43,8 +43,11 @@ class Livre:
 l1 = Livre("La recette", "Francis Navarre")
 l2 = Livre("Le jardin", "Jacques Pourcel", False)
 l3 = Livre("Les Misérables", "Victor Hugo", True)
+print("----------------- str ------------------")
 print(l1, l2, l3)
+print("-----------------après setter ------------------")
 liste = (l1, l2, l3)
 l1.auteur = "Laurent Pourcel"
 print(l1, l2, l3)
+print("----------------- Liste ------------------")
 print(liste)
