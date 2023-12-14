@@ -49,8 +49,7 @@ class Achat(Sortie):
         prix_a_payer = 0
         if self.livre._achetable:
             montant_achat = self.livre.prix_achat
-            prix_a_payer+=montant_achat
-            return prix_a_payer
+            return montant_achat
         return f"on ne peut pas acheter ce livre"
 
 
