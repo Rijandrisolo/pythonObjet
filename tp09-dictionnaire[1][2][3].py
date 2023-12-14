@@ -18,7 +18,7 @@ def func_exo2(v: []):
 
 func_exo2(["coucou", "hi"])
 
-
+print("--------------exo 03 ----------------")
 # exo 03
 def func_exo3(v: []):
     dicoList3 = {}
@@ -26,7 +26,7 @@ def func_exo3(v: []):
         print(essai, v.count(essai))
         dicoList3.update({essai: v.count(essai)})
 
-    print("--------------exo 03 ----------------")
+
     print("La liste", v)
     print(dicoList3)
 
