@@ -42,11 +42,10 @@ prenom = mots[1]
 chiffre = mots[2]
 chiffre = chiffre.replace(" ", "")
 chiffre = float(chiffre)
-
-sal = Salarie(nom, prenom, chiffre)
-liste = [mots]
-mis= [sal]
-print(sal)
+print(nom, prenom, chiffre)
+liste=[{nom, prenom, chiffre}]
+print("Chiffre est de : ", type(chiffre))
 print(liste)
-print(mis)
+sal = Salarie(nom, prenom, chiffre)
+
 
