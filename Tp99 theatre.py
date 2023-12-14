@@ -40,8 +40,9 @@ class Theatre:
             print("nom théâtre : ", self.nom_theatre)
             self.nb_clients = clients
             self.recette = chiffre
+            print(f"Il reste {self.capacite - self.nb_clients} places pour {self.nom_theatre}")
         else:
-            print(f" Désolé, il ne reste que {self.capacite-self.nb_clients} places")
+            print(f" Désolé, il ne reste que {self.capacite-self.nb_clients} places pour {self.nom_theatre}")
 
 t1 = Theatre("Alexandre Burma", 60, 0, 0)
 t2 = Theatre("Marcel Pagnol", 30, 0, 0)
