@@ -41,22 +41,27 @@ class Emprunt(Sortie):
 
 
 class Achat(Sortie):
-    def __init__(self, date, livre, montant_achat):
+    def __init__(self, date, livre):
         super().__init__(date, livre)
-        self.montant_achat = montant_achat
+        self.montant_achat = self.get_montant()
+    def __str__(self):
+        return f"{super().__str__()} date : {self.date} \n Montant achat : {self.get_montant()}"
 
     def get_montant(self):
         prix_a_payer = 0
+        print("test")
         if self.livre._achetable:
             montant_achat = self.livre.prix_achat
             return montant_achat
-        return f"on ne peut pas acheter ce livre"
+       # return f"on ne peut pas acheter ce livre"
 
 
-l4 = LivrePapier("Les misérables", "Victor Hugo", "Bon", True)
-l5 = LivreNumerique("Germinal", "Emile Zola", "pdf", False)
+l4 = LivrePapier("Les misérables", "Victor Hugo", "Bon", True, 10, 0.5)
+l5 = LivreNumerique("Germinal", "Emile Zola", "pdf", False, 5, 0.2)
 emprunt = Emprunt("21/11/2023", l4, 10)
 emprunt1 = Emprunt("21/12/2023", l5, 5)
+achat1 = Achat("21/12/2023", l4)
+
 liste = [l4, l5]
 
 liste_emprunt = [emprunt, emprunt1]
@@ -68,3 +73,5 @@ print("---------------------------------")
 print(emprunt1)
 print("----------------Liste Emprunts-----------------")
 print(liste_emprunt)
+print("----------------Achat-----------------")
+print(achat1)
