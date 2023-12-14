@@ -42,13 +42,16 @@ class Theatre:
             self.recette = chiffre
             print(f"Il reste {self.capacite - self.nb_clients} places pour {self.nom_theatre}")
         else:
-            print(f" Désolé, il ne reste que {self.capacite-self.nb_clients} places pour {self.nom_theatre}")
+            print(f" Désolé, il ne reste que {self.capacite-self.nb_clients} places pour {self.nom_theatre}, vous avez demandé {nb}")
 
 t1 = Theatre("Alexandre Burma", 60, 0, 0)
 t2 = Theatre("Marcel Pagnol", 30, 0, 0)
 liste = [t1, t2]
+print(liste)
 t1.inscrire(20, 200)
+print(liste)
 t1.inscrire(20, 200)
+print(liste)
 t1.inscrire(30, 200)
-liste = [t1, t2]
+
 print(liste)
