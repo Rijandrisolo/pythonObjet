@@ -34,12 +34,14 @@ class Theatre:
         return self.recette
 
     def inscrire(self, nb, prix):
+        print(f" Votre demande : {nb} places")
         if self.nb_clients + nb <= self.capacite:
             clients = self.nb_clients + nb
             chiffre = self.recette + prix
             print("nom théâtre : ", self.nom_theatre)
             self.nb_clients = clients
             self.recette = chiffre
+            print(f" Votre réservation de {nb} places est enregistrée ")
             print(f"Il reste {self.capacite - self.nb_clients} places pour {self.nom_theatre}")
         else:
             print(f" Désolé, il ne reste que {self.capacite-self.nb_clients} places pour {self.nom_theatre}, vous avez demandé {nb}")
@@ -50,7 +52,7 @@ liste = [t1, t2]
 print(liste)
 t1.inscrire(20, 200)
 print(liste)
-t1.inscrire(20, 200)
+t1.inscrire(15, 200)
 print(liste)
 t1.inscrire(30, 200)
 
