@@ -30,7 +30,7 @@ class Emprunt(Sortie):
         return f"{super().__str__()} durée : {self.duree_emprunt} \n Coût de l'emprunt : {self.get_montant()} \n"
 
     def get_montant(self):
-        prix_unit = 0
+        #prix_unit = 0
         # if type(self.livre) == LivrePapier:
         #     prix_unit = 0.5
         # elif type(self.livre) == LivreNumerique:
@@ -46,18 +46,22 @@ class Achat(Sortie):
         self.montant_achat = montant_achat
 
     def get_montant(self):
-        prix_a_payer = self.montant_achat
-        return prix_a_payer
+        prix_a_payer = 0
+        if self.livre._achetable:
+            montant_achat = self.livre.prix_achat
+            prix_a_payer+=montant_achat
+            return prix_a_payer
+        return f"on ne peut pas acheter ce livre"
 
 
 l4 = LivrePapier("Les misérables", "Victor Hugo", "Bon", True)
 l5 = LivreNumerique("Germinal", "Emile Zola", "pdf", False)
-emprunt = Emprunt("21/21/2023", l4, 10)
-emprunt1 = Emprunt("21/21/2023", l5, 5)
-print("----------------Liste des livres-----------------")
+emprunt = Emprunt("21/11/2023", l4, 10)
+emprunt1 = Emprunt("21/12/2023", l5, 5)
 liste = [l4, l5]
 
 liste_emprunt = [emprunt, emprunt1]
+print("----------------Liste des livres-----------------")
 print(liste)
 print("----------------Les Emprunts-----------------")
 print(emprunt)
