@@ -20,6 +20,7 @@ class Personne:
 
 pers1 = Personne("Coco", 32)
 pers2 = Personne("Coco", 32)
-liste = {pers1, pers2}
-for list in liste:
+#dans un set différence set avec dictionnaire, set = sans clé
+set_liste = {pers1, pers2}
+for liste in set_liste:
     print(list)
