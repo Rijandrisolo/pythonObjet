@@ -12,7 +12,10 @@ class Salarie():
 
     def __repr__(self):
         return f"  {self.nom_salarie}  {self.matricule}  {self.service}"
-
+    # @property
+    # def service(self):
+    #    return self.service
+    #
 
 salarie1 = Salarie(nom_salarie="Antoine Dupont", matricule="127", service="DSI/JAVA")
 salarie2 = Salarie(nom_salarie="Berthe Casa", matricule="238", service="DSI/PHP")
@@ -25,13 +28,18 @@ liste = [salarie1, salarie2, salarie3, salarie4, salarie5, salarie6]
 
 liste_service = []
 compte_service = {}
-
-for essai in enumerate(liste):
-    # print(essai[1].service)
-    liste_service.append(essai[1].service)
-    print(liste_service)
-for service in liste_service:
-    # print(service, liste_service.count(service))
-    compte_service.update({service: liste_service.count(service)})
-
-print("Liste service", compte_service)
+for sal in liste:
+    service = sal.service
+    if service not in compte_service:
+        compte_service[service]=1
+    else:
+        compte_service[service]+=1
+# for essai in enumerate(liste):
+#     # print(essai[1].service)
+#     liste_service.append(essai[1].service)
+# print(liste_service)
+# for service in liste_service:
+#     # print(service, liste_service.count(service))
+#     compte_service.update({service: liste_service.count(service)})
+# print(f"---------------------Dictionnaire service---------------------")
+print(compte_service)

@@ -23,8 +23,7 @@ print("--------------exo 03 ----------------")
 def func_exo3(v: []):
     dicoList3 = {}
     for essai in v:
-        print(essai, v.count(essai))
-        dicoList3.update({essai: v.count(essai)})
+       dicoList3.update({essai: v.count(essai)})
 
 
     print("La liste", v)
