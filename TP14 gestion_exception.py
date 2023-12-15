@@ -12,8 +12,8 @@ class Personne:
 pers1 = Personne(nom="DUPONT", prenom="Antoine", service="DSI/JAVA")
 pers2 = Personne(nom="CASA", prenom="", service="DSI/PHP")
 pers3 = Personne(nom="OUASSA", prenom="Fatima", service="")
-pers4 = Personne(nom="AC", prenom="Cassian", service="DSI/PYTHON")
-pers5 = Personne(nom="M", prenom="Ha", service="")
+pers4 = Personne(nom="A", prenom="Cassian", service="DSI/PYTHON")
+pers5 = Personne(nom="", prenom="Ha", service="DSI/PYTHON")
 pers6 = Personne(nom="PIC", prenom="A", service="DSI/JAVA")
 
 
