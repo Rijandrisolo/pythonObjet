@@ -10,8 +10,8 @@ class Personne:
         return False
 
 
-personne1 = Personne("Alice", 25)
-personne2 = Personne("Alice", 25)
+personne1 = Personne("Coco", 32)
+personne2 = Personne("Coco", 32)
 
 
 resultat_apres_redefinition = personne1 == personne2
