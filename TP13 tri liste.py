@@ -25,6 +25,12 @@ pers1 = Personne("Coco", 32)
 pers2 = Personne("Toto", 25)
 pers3 = Personne("Jaco", 45)
 liste = [pers1, pers2, pers3]
-tri_liste = sorted(liste)
+def tri_age(personne):
+    return personne.age
+def tri_nom(personne):
+    return personne.nom
+
+
+tri_liste = sorted(liste, key=tri_age)
 for liste in tri_liste:
     print(liste)
