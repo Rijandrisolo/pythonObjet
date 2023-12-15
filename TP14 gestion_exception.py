@@ -18,14 +18,14 @@ pers6 = Personne(nom="PIC", prenom="A", service="DSI/JAVA")
 
 
 class PersonneService:
-    @staticmethod
+
     def valider(personne):
         try:
             if not personne.nom or len(personne.nom.strip()) < 2:
-                raise PersonneException("Le nom est manquant.")
+                raise PersonneException("Le nom est manquant ou moins de 2 caractères.")
 
             elif not personne.prenom or len(personne.prenom.strip()) < 2:
-                raise PersonneException("Le prénom est manquant.")
+                raise PersonneException("Le prénom est manquant ou moins de 2 caractères.")
 
             elif not personne.service:
                 raise PersonneException("Le service doit être renseigné.")
@@ -35,4 +35,4 @@ class PersonneService:
             print(f"Validation réussie pour {personne.nom} {personne.prenom}.")
 
 
-PersonneService.valider(pers1)
+PersonneService.valider(pers2)
