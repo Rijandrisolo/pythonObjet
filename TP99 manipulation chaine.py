@@ -12,7 +12,7 @@ print("--------------L'index du premier ,----------------")
 for car in chaine:
     if car == ";":
         print("L'index du premier ; est : ", chaine.index(car))
-print("--------------Extraction chaine de caractère ,----------------")
+print("--------------Extraction chaine de caractère index 0 à 8--------------")
 
 index_debut = 0
 index_fin = 8

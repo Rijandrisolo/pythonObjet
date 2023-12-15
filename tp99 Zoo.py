@@ -60,9 +60,9 @@ class Zoo:
 
     def afficher_infos(self):
         for zone in self.zones:
-            print(f"{zone.nom}:")
+            print(f"---------------------{zone.nom} -----------------------")
             for animal in zone.animaux:
-                print(f"   - {animal.nom} ({animal.categorie}, {animal.comportement})")
+                print(f"   - {animal.nom} ({animal.categorie}, {animal.comportement}) ")
             print("\n")
 
 
@@ -81,4 +81,5 @@ zoo.ajouter_animal(animal4)
 zoo.ajouter_animal(animal5)
 
 print(f"Quantité de nourriture nécessaire : {zoo.get_quant_nourriture()} kg")
+print("\n------------------- Animaux par zone ----------------------\n")
 zoo.afficher_infos()
