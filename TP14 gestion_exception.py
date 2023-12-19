@@ -20,6 +20,10 @@ pers6 = Personne(nom="PIC", prenom="A", service="DSI/JAVA")
 class PersonneService:
 
     def valider(personne):
+        """
+
+        :return:
+        """
         try:
             if not personne.nom or len(personne.nom.strip()) < 2:
                 raise PersonneException("Le nom est manquant ou moins de 2 caractères.")
@@ -35,4 +39,9 @@ class PersonneService:
             print(f"Validation réussie pour {personne.nom} {personne.prenom}.")
 
 
-PersonneService.valider(pers2)
+#PersonneService.valider(pers2)
+def main():
+    list={pers1, pers2, pers3, pers4, pers5, pers6 }
+    for personne in list:
+        PersonneService.valider(personne)
+main()

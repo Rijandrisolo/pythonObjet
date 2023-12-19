@@ -4,6 +4,12 @@ class Zoo:
 
     @classmethod
     def ajouter_animaux(cls, animal, nombre):
+        """
+
+        :param animal:
+        :param nombre:
+        :return:
+        """
         if animal not in cls.liste_animaux:
             cls.liste_animaux.append(animal)
         cls.nbr_total += nombre
